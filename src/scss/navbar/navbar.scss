@@ -1,0 +1,305 @@
+@import "../default/variables";
+@import "../commonStyles/commonStyles";
+.navbar__ctn {
+  max-width: 1800px;
+  width: 95%;
+  z-index: 999;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 10px;
+  border-radius: 10px;
+  box-shadow:0px 2px 12px 2px #13131333;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transition: 0.2s ;
+  height: 60px;
+  background-color:rgb(255, 247, 234);
+  transition: border 0;
+  
+
+  @media (max-width:350px){
+    padding-inline: 0;
+    padding: 10px 0 ;
+    width: 100%;
+    border-radius: 0px;
+   
+    .navabr_logo__ctn {
+      padding-inline: 5px;
+    }
+  }
+  @include responsive($lg){
+    height: 70px;
+  }
+  @include responsive($xl){
+    padding-inline: 20px; 
+    height: 80px;
+    
+  } 
+
+   
+  .navabr_logo__ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px 10px ;
+    border-radius: inherit;
+    
+   
+
+   
+
+    gap: 5px;
+    & .navbar__logo {
+      height: 55px;
+    }
+    .navabr_logo__text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      max-width: none;
+     width: 140px;
+    
+      @media (max-width:250px) {
+        max-width: 85px;
+        overflow: hidden;
+      }
+      .navabr_logo__maintxt {
+        font-size: 1.45rem;
+        color: $primary-orange;
+        line-height: 25px;
+        text-align: center;
+        vertical-align: baseline;
+        letter-spacing: 1px;
+        @media (max-width:250px) {
+          font-size: 1rem;
+          line-height: normal;
+          letter-spacing: 0;
+        }
+      }
+      .navabr_logo__subtxt {
+        font-weight: 400;
+        font-size: 0.75rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #515050;
+        width: 100%;
+        display: flex;
+        @media (max-width:250px) {
+          font-size: 0.6rem;
+        }
+        span{
+          background-color: orange;
+          height: 2px;
+          flex: 1;
+          display: inline-block;
+          margin-block:auto ;
+          
+        }
+      }
+    }
+    @media (max-width:350px){
+      padding-inline: 5px;
+      
+    }
+   
+    @include responsive($lg){
+      padding-left: 20px;
+      & .navbar__logo {
+        height: 60px;
+      }
+      .navabr_logo__text {
+        padding-top: 5px;
+        width: 175px;
+      .navabr_logo__maintxt {
+        font-size: 1.9rem;
+        font-weight: 700;
+       
+      }
+      .navabr_logo__subtxt {
+        font-size: 0.95rem;
+        display: flex;
+      }
+    }
+    }
+
+    @include responsive($xl){
+      & .navbar__logo{
+        height: 70px;
+      }
+      .navabr_logo__text {
+        padding-top: 5px;
+        width: 200px;
+      .navabr_logo__maintxt {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .navabr_logo__subtxt {
+        font-size: 1rem;
+      }}
+      
+    }
+    @include responsive($xxl){
+      & .navbar__logo{
+        height: 75px;
+      }
+      .navabr_logo__text {
+       
+      .navabr_logo__maintxt {
+        font-size: 2.1rem;
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      .navabr_logo__subtxt {
+        font-size: 1rem;
+      }}
+      
+    }
+  }
+  .navbar__options_list {
+    position: absolute;
+    top: 60px;
+    transition: height 1s ease-in-out ;
+    background-color: inherit;
+
+    
+    
+    width: 100%;
+    border-radius: inherit;
+    height: 0;
+    overflow: hidden;
+   
+    :last-child{
+      background-color: $dark-orange;
+      color: white;
+    }
+
+    &_item {
+      height: 2rem;
+      width: 90%;
+      opacity: 0;
+      border: 1px solid rgba(0,0,0,0.05);
+      width: 100%;
+      text-align: center;
+      @include flexCenter;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      transition: 0.5s ease-in-out ;
+      cursor: pointer;
+      color: #515050;
+     
+
+      
+    }
+
+    @include responsive($lg){
+      position: unset;
+      height: auto;
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: max-content;
+      padding-right: 20px;
+      flex: 1;
+      gap: 10px;
+      
+      :last-child{
+        margin-right:5px;
+        background-color: $dark-orange;
+        color: white;
+        width: 6rem;
+      }
+      :hover{
+        transition: none;
+        background-color: $secondary-orange;
+        color: white;
+      }
+     
+      &_item {
+      opacity: 1;
+     padding-inline:0.25em ;
+     transition: 0.2s ease-in-out;
+     width: 5rem;
+      border: none;
+      letter-spacing: 1px;
+      color: $text-clr;
+      font-weight: 500;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      border-radius: 5px;
+      margin-left:5px; 
+
+    
+    
+    
+      
+      
+    }
+    }
+    @include responsive($xl){
+      gap: 1.25rem;
+     
+      &_item {
+        transition: none;
+        font-size: 0.75rem;
+        width: 5.5rem;
+        height: 2.2rem;
+        margin-right: 0
+      }
+      
+    }
+    @include responsive($xxl){
+      gap: 1.5rem;
+      &_item{
+        font-size: 0.8rem;
+        width: 6.5rem;
+        padding-inline: 0.25rem;
+      }
+      :last-child{
+        width: 7rem;
+      }
+    }
+   
+  }
+
+
+  .toggleBtn{
+    @include flexCenter;
+    color: $primary-orange;
+    font-size: 1.6rem;
+    margin-right: 20px;
+
+    @media (min-width:$md){
+      display: none;
+    }
+    @media (max-width:350px){
+      margin-right: 5px;
+      
+    }
+  }
+}
+.activeNav{
+ 
+  @include responsive($md){
+   
+    border-radius: 10px 10px 0px 0px;
+    .navbar__options_list{
+    height: auto;
+    overflow: none;
+    box-shadow: 0px 6px 6px 2px #13131333;
+    border-radius: 0px 0px 10px 10px;
+    }
+    .navbar__options_list_item{
+        opacity: 1;
+    }
+  }
+    
+  }
