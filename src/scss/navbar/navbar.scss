@@ -180,7 +180,15 @@
       background-color: $dark-orange;
       color: white;
     }
-
+    a{
+      text-decoration: none;
+      background: none;
+    }
+    .active{
+      transition: 1s ease-in-out;
+      background-color: $secondary-orange;
+      color: white;
+    }
     &_item {
       height: 2rem;
       width: 90%;
@@ -196,9 +204,10 @@
       cursor: pointer;
       color: #515050;
      
-
+        
       
     }
+
 
     @include responsive($lg){
       position: unset;
@@ -222,6 +231,7 @@
         background-color: $secondary-orange;
         color: white;
       }
+      
      
       &_item {
       opacity: 1;

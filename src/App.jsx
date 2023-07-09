@@ -1,7 +1,9 @@
 import React from "react";
 import { Router } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Pages/Home";
+import Home from "./components/Pages/Home/Home";
+import { Routes,Route } from "react-router-dom";
+import Routing from "./Routing/Routing";
 function App() {
   
   return (
@@ -9,7 +11,8 @@ function App() {
     
       <div className="main">
         <Navbar/>
-        <Home/>
+        
+        <Routing/>
       </div>
      
     </div>

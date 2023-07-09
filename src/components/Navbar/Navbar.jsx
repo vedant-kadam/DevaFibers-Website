@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import '../../scss/navbar/navbar.scss'
 import logo from '../../assets/images/main-logo.png'
 import {BiMenu} from 'react-icons/bi'
+import { Link,NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -21,22 +21,23 @@ const Navbar = () => {
 
             </div>
         </div>
-        <nav className='navbar__options_list'>
-          <li className='navbar__options_list_item'>
+        <nav ul className='navbar__options_list'>
+          <NavLink  to='/'  className='navbar__options_list_item'>
               Home
-          </li>
-          <li className='navbar__options_list_item'>
+          </NavLink>
+          <NavLink to="/about" className='navbar__options_list_item'>
             About Us
-          </li>
-          <li className='navbar__options_list_item'>
+          </NavLink>
+          <NavLink to='/products' className='navbar__options_list_item'>
                 Products
-          </li>
-          <li className='navbar__options_list_item'>
+          </NavLink>
+          <NavLink to='/services' className='navbar__options_list_item'>
               Services
-          </li>
-          <li className='navbar__options_list_item'>
+          </NavLink>
+          <NavLink to='/contact' className='navbar__options_list_item'>
               Contact Us
-          </li>
+          </NavLink>
+        
             
         </nav>
         <div className='toggleBtn'><BiMenu onClick={toggleNav} /></div>

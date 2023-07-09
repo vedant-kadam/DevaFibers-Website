@@ -132,6 +132,7 @@
     &_slide{
         transition: 1s all ease-in-out;
         opacity: 1;
+        // max-height: 550px;
        
         &_inactive{
             opacity: 0.5;
