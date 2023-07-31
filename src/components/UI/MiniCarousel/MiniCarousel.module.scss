@@ -1,0 +1,107 @@
+@import "../../../scss/commonStyles/commonStyles";
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  background: blanchedalmond;
+  position: relative;
+
+  .btnCtn {
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-radius: 50px;
+    @include flexCenter;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btnCtnLeft {
+    @extend .btnCtn;
+    left: -22px;
+  }
+  .btnCtnRight {
+    @extend .btnCtn;
+    right: -22px;
+  }
+//   .dragging{
+//     scroll-behavior: auto;
+//     .dragableCard{
+//         cursor: grab !important;
+//         user-select: none !important;
+//     }
+//   }
+  .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0 !important;
+    
+    ::-webkit-scrollbar{
+        width: 0;
+        display: none !important;
+    }
+    ::-webkit-scrollbar-thumb{
+        display: none !important;
+        background: transparent;
+    }
+    ::-webkit-scrollbar-track{
+        display: none !important;
+        background: transparent;
+    }
+
+    :where(.card, .img) {
+      @include flexCenter;
+    }
+   
+    .card {
+      list-style: none;
+      scroll-snap-align: start;
+      background: orange;
+      border-radius: 8px;
+      height: 342px;
+      @include flexCenter;
+      flex-direction: column;
+      padding-bottom: 15px;
+      cursor: pointer;
+
+      h2 {
+        font-weight: 500;
+        font-size: 1.56rem;
+        margin: 30px 0 5px;
+      }
+      .span {
+        color: #6a6d78;
+        font-size: 1.13rem;
+      }
+      .img {
+        background: #8b53ff;
+        width: 148px;
+        height: 148px;
+        border-radius: 50%;
+        img {
+          width: 140px;
+          height: 140px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+  
+}

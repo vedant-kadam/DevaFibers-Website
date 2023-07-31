@@ -1,62 +1,62 @@
 @import "../default/variables";
 @import "../commonStyles/commonStyles";
-.mainPage_about{
+.mainPage_about {
+  display: flex;
+  width: 95vw;
+  max-width: $maxWidth;
+  margin-inline: auto;
+  margin-block: 50px;
+  padding-inline: 10px;
+
+  .message_ctn {
     display: flex;
-    width:95vw;
-    max-width: $maxWidth;
-    margin-inline: auto;
-    margin-block: 50px;
-    padding-inline: 10px;
+    justify-content: start;
+    flex-direction: column;
+    flex: 1;
+    padding-inline: 10px 30px;
+    &_section_header {
+      padding-bottom: 0px;
+      margin-bottom: 5px;
+      font-size: 1.5rem;
+      white-space: break-spaces;
 
-    .message_ctn{
-        display: flex;
-        justify-content: start;
-        flex-direction: column;
-        flex: 1;
-        padding-inline: 10px 30px;
-        &_section_header{
-            padding-bottom: 0px;
-            margin-bottom: 5px;
-            font-size: 1.5rem;
-            white-space: break-spaces;
-            
-            color: $text-clr;
-            // border-bottom: 1px solid rgb(255, 116, 3);
-            letter-spacing: 1px;
-            
-        }
-        &_main{
-            //text-align: center;
-            padding-block: 10px;
-            font-size: 2.5rem;
-            white-space: break-spaces;
-            color: $text-clr;
-            color: rgb(255, 85, 0);
-
-        }
-        &_sub{
-            font-size: 0.98rem;
-            letter-spacing: 1px;
-            padding-bottom: 10px;
-            color: black;
-        }
-        &_knowMore{
-            padding-top: 5px;
-            button{
-                @include defaultButton;
-                cursor: pointer;
-
-            }
-
-        }
+      color: $text-clr;
+      // border-bottom: 1px solid rgb(255, 116, 3);
+      letter-spacing: 1px;
     }
-    .image_ctn{
-       flex: 0.7;
-       @include flexCenter;
-       img{
-        width: 100%;
-        border-radius: 10px;
-        
-       }
+    &_main {
+      //text-align: center;
+      padding-block: 10px;
+      font-size: 2.5rem;
+      white-space: break-spaces;
+      color: $text-clr;
+      color: rgb(255, 85, 0);
     }
+    &_sub {
+      font-size: 0.98rem;
+      letter-spacing: 1px;
+      padding-bottom: 10px;
+      color: black;
+    }
+    &_knowMore {
+      padding-top: 5px;
+      button {
+        @include defaultButton;
+        cursor: pointer;
+        padding: 7px 10px;
+        font-size: 1rem;
+        background: $primary-orange;
+        color: white;
+        border: none;
+      }
+    }
+  }
+  .image_ctn {
+    flex: 0.7;
+    @include flexCenter;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
 }

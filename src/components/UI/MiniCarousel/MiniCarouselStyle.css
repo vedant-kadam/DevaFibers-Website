@@ -1,0 +1,17 @@
+.dragging{
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
+   
+  }
+  .dragging .dragableCard{
+    cursor: grab !important;
+    user-select: none;
+}
+
+.defaultMiniCarousel::-webkit-scrollbar{
+    width: 0 !important;
+    display: none  !important;
+}
+.noTransition{
+    scroll-behavior: auto !important;
+}

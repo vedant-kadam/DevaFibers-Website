@@ -1,0 +1,10 @@
+@import " ../../../.../../../../scss/default/variables";
+.sectionWrapper{
+    max-width: $maxWidth;
+    padding:$defaultPadding ;
+    width: 95vw;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+}
